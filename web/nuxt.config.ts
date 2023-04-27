@@ -2,5 +2,10 @@
 export default defineNuxtConfig({
   typescript: {
     shim: false,
+    strict: true,
+  },
+  routeRules: {
+    "/": { ssr: true },
+    "/app/**": { ssr: false },
   },
 });
