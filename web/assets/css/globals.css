@@ -22,3 +22,12 @@
   font-weight: 600;
   font-style: normal;
 }
+
+/* presets */
+button {
+  all: unset;
+}
+
+.fi {
+  @apply flex justify-center items-center;
+}
