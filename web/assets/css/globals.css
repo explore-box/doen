@@ -24,7 +24,8 @@
 }
 
 /* presets */
-button {
+button,
+input {
   all: unset;
 }
 
