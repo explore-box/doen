@@ -1,16 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'],
+  image: {},
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
   css: [
     '@/assets/css/globals.css',
-    '@flaticon/flaticon-uicons/css/all/all.css',
+    '@flaticon/flaticon-uicons/css/all/all.css'
   ],
   typescript: {
     shim: false,
-    strict: true,
+    strict: true
   },
   routeRules: {
     '/': { ssr: true },
-    '/app/**': { ssr: false },
-  },
+    '/app/**': { ssr: false }
+  }
 })
