@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './app.module'
 import * as compression from 'compression'
+import * as useragent from 'express-useragent'
 import helmet from 'helmet'
 import {
   INestApplication,
@@ -51,12 +52,19 @@ async function bootstrap() {
   // register the app security, plugins,
   // and other middleware
   app.enableVersioning({ type: VersioningType.URI })
-  app.useGlobalPipes(new ValidationPipe({}))
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+      forbidNonWhitelisted: true
+    })
+  )
   app.use(compression())
   app.use(helmet())
   app.enableCors({
     origin: '*'
   })
+  app.use(useragent.express())
 
   // create swagger document
   createOpenAPIDocument(app)

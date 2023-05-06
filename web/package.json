@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
@@ -15,11 +16,20 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@types/node": "^18",
+    "@types/passport-github2": "^1.2.5",
+    "@types/passport-google-oauth20": "^2.0.11",
+    "@types/passport-local": "^1.0.35",
+    "cypress": "^12.11.0",
     "nuxt": "^3.4.2"
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^2.1.0",
+    "defu": "^6.1.2",
     "gsap": "^3.11.5",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
     "vee-validate": "^4.8.6",
     "yup": "^1.1.1"
   }

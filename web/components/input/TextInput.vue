@@ -44,5 +44,6 @@ interface TextInputProps {
 }
 
 const props = defineProps<TextInputProps>()
-const { errorMessage, value } = useField(() => props.name)
+const { errorMessage, value, setValue } = useField(() => props.name)
+setValue(props.value)
 </script>

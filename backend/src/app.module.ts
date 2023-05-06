@@ -1,12 +1,13 @@
-import { Module } from '@nestjs/common'
+import { Global, Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
-import { TigrisModule } from './tigris/tigris.module'
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler'
 import { APP_GUARD } from '@nestjs/core'
-import { UserSchema } from './user/model/user.schema'
-import { UserModule } from './user/user.module'
-import { AuthModule } from './auth/auth.module'
+import { UserModule } from '~/user/user.module'
+import { AuthModule } from '~/auth/auth.module'
+import { ScheduleModule } from '@nestjs/schedule'
+import { TigrisProvider } from '~/config/providers/tigris.provider'
 
+@Global()
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, expandVariables: true }),
@@ -14,18 +15,19 @@ import { AuthModule } from './auth/auth.module'
       limit: 10,
       ttl: 60
     }),
-    TigrisModule.forRoot({ schemas: [UserSchema] }),
+    ScheduleModule.forRoot(),
 
     // feature module
     UserModule,
     AuthModule
   ],
-
   providers: [
     {
       provide: APP_GUARD,
       useClass: ThrottlerGuard
-    }
-  ]
+    },
+    TigrisProvider
+  ],
+  exports: [TigrisProvider]
 })
 export class AppModule {}

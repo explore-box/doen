@@ -30,18 +30,19 @@ export class UserSchema {
 
   @ApiProperty()
   @Field()
+  password?: string
+
+  @ApiProperty()
+  @Field()
   bio?: string
 
   @ApiProperty()
   @Field({ elements: TigrisDataTypes.STRING })
-  providers?: string[]
-  @ApiProperty()
-  @Field()
-  birthDate?: string
+  providers?: ('email' | 'google' | 'github')[]
 
   @ApiProperty()
   @Field()
-  password?: string
+  birthDate?: Date
 
   @ApiProperty()
   @Field()
@@ -57,17 +58,17 @@ export class UserSchema {
 
   @ApiProperty()
   @Field()
-  status?: string
+  status?: 'active' | 'disabled'
 
   @ApiProperty()
   @Field()
-  role?: string
+  role?: 'user' | 'admin'
 
   @ApiProperty()
   @Field({ default: new Date(), timestamp: 'createdAt' })
-  createdAt?: string
+  createdAt?: Date
 
   @ApiProperty()
   @Field({ default: new Date(), timestamp: 'updatedAt' })
-  updatedAt?: string
+  updatedAt?: Date
 }

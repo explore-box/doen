@@ -6,8 +6,8 @@ import {
   TigrisDataTypes
 } from '@tigrisdata/core'
 
-@TigrisCollection('sessions')
-export class SessionSchema {
+@TigrisCollection('tokens')
+export class TokenSchema {
   @ApiProperty()
   @PrimaryKey(TigrisDataTypes.STRING, { order: 1, autoGenerate: true })
   id?: string
@@ -18,25 +18,29 @@ export class SessionSchema {
 
   @ApiProperty()
   @Field()
-  device?: string
+  email?: string
 
   @ApiProperty()
   @Field()
-  ip?: string
+  token?: string
+
+  @ApiProperty({ enum: ['verification', 'login', 'auth'] })
+  @Field()
+  type?: 'verification' | 'login' | 'auth' | 'access' | 'refresh'
 
   @ApiProperty()
   @Field()
-  key?: string
+  desc?: string
 
   @ApiProperty()
   @Field()
-  status?: string
+  expiredAt?: Date
 
   @ApiProperty()
-  @Field()
-  createdAt?: string
+  @Field({ default: new Date(), timestamp: 'updatedAt' })
+  createdAt?: Date
 
   @ApiProperty()
-  @Field()
-  updatedAt?: string
+  @Field({ default: new Date(), timestamp: 'updatedAt' })
+  updatedAt?: Date
 }

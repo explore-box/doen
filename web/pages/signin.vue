@@ -28,7 +28,7 @@
           <!-- signin using credential email and password -->
           <Form
             :context="form"
-            @submit="credentialSignin"
+            @submit="emailSignin.mutate"
             class="flex flex-col gap-5 w-9/12 mt-16"
           >
             <TextInput
@@ -43,20 +43,28 @@
               pre-icon="fi fi-rr-lock"
             />
 
-            <div class="flex justify-end">
-              <TextButton link="/forgot-password">Forgot Password</TextButton>
-            </div>
-
-            <FlatButton type="submit" class="mt-6">Sign in</FlatButton>
+            <FlatButton
+              type="submit"
+              :disabled="emailSignin.pending.value"
+              class="mt-6"
+            >
+              {{ emailSignin.pending.value ? 'Sigining user' : 'Signin' }}
+            </FlatButton>
           </Form>
 
           <!-- sign using oauth methods -->
           <div class="flex flex-wrap gap-4 mt-7">
-            <FlatButton @click="googleSignin" class="bg-gray-100 !px-5"
+            <FlatButton
+              :disabled="emailSignin.pending.value"
+              @click="googleSignin"
+              class="bg-gray-100 !px-5"
               ><i class="fi fi-brands-google text-xl"></i> Using
               Google</FlatButton
             >
-            <FlatButton @click="githubSignin" class="bg-gray-100 !px-5"
+            <FlatButton
+              :disabled="emailSignin.pending.value"
+              @click="githubSignin"
+              class="bg-gray-100 !px-5"
               ><i class="fi fi-brands-github text-xl"></i> Using
               Github</FlatButton
             >
@@ -81,34 +89,89 @@
 <script setup lang="ts">
 import { useForm } from 'vee-validate'
 import { object, string } from 'yup'
+import { AuthPayload } from '~/types/auth'
 
+const config = useRuntimeConfig()
 const router = useRouter()
 
-const passwordRegexp =
-  '^(?=.*[0-9!@#$%^&*])(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+\\-=\\[\\]{};\':"\\\\|,.<>\\/?])(?=\\S+$).{8,}$'
+// define the form and all
+// of the validation schema
 const fromSchema = object({
   email: string()
     .required('Opps your email not found')
     .trim()
     .email('Your email looks weird'),
   password: string()
-    .required('Please add your password')
+    .required('Opps, your password not found')
     .trim()
-    .min(8, 'The password at least must be 8 character')
-    .matches(
-      new RegExp(passwordRegexp),
-      'Password at least contain 1 number and unique characters'
-    )
+    .min(8, 'Your password at least must be 8 characters')
 })
 const form = useForm({ validationSchema: fromSchema })
 
-const back = () => {
-  router.back()
+const back = () => router.back()
+
+// sigin using email and
+// password
+const emailSignin = useMutation<AuthPayload, any>(
+  async (formData: any) => {
+    // start to signin using the api
+    // and save the whole session
+    const { data, error } = await useApiClient<AuthPayload>(
+      '/v1/auth/email-pass',
+      {
+        method: 'post',
+        body: formData
+      }
+    )
+
+    // throw error if found
+    if (error.value) {
+      throw error.value.data
+    }
+
+    if (data.value) {
+      await useFetch('/api/auth/session', {
+        method: 'post',
+        body: {
+          key: 'user',
+          value: data.value.user
+        }
+      })
+      await useFetch('/api/auth/session', {
+        method: 'post',
+        body: {
+          key: 'accessToken',
+          value: data.value.accessToken
+        }
+      })
+      await useFetch('/api/auth/session', {
+        method: 'post',
+        body: {
+          key: 'resfreshToken',
+          value: data.value.refreshToken
+        }
+      })
+    }
+  },
+  {
+    onSuccess: async () => {
+      await navigateTo('/app')
+    },
+    onError: (error) => {
+      if ((error.message = 'auth/invalid-password')) {
+        form.setFieldError('password', 'Opps, your password look weird')
+      }
+    }
+  }
+)
+
+// sign the user using google oauth2
+const googleSignin = () => {
+  location.href = `${config.public.auth.callbackBaseUrl}/api/auth/google`
 }
 
-const credentialSignin = (data: any) => {}
-
-const googleSignin = () => {}
-
-const githubSignin = () => {}
+// signin the user using github oauth2
+const githubSignin = () => {
+  location.href = `${config.public.auth.callbackBaseUrl}/api/auth/github`
+}
 </script>

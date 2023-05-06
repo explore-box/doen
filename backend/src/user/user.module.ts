@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common'
 import { UserController } from './user.controller'
 import { UserService } from './user.service'
-import { TigrisModule } from 'src/tigris/tigris.module'
 
 @Module({
-  imports: [TigrisModule],
+  imports: [],
   controllers: [UserController],
-  providers: [UserService]
+  providers: [UserService],
+  exports: [UserService]
 })
 export class UserModule {}
