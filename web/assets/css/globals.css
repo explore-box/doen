@@ -28,6 +28,9 @@ button,
 input {
   all: unset;
 }
+body {
+  @apply min-h-screen;
+}
 
 .fi {
   @apply flex justify-center items-center;
