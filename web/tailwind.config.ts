@@ -13,6 +13,9 @@ export default <Partial<Config>>{
       recoleta: ['Recoleta', 'serif']
     },
     extend: {
+      fontSize: {
+        base: '15px'
+      },
       colors: {
         brand: {
           pink: '#FFB9F8',
