@@ -7,12 +7,8 @@
     <AppSideNav />
 
     <!-- the app childs component -->
-    <main class="flex">
+    <main class="flex flex-1 ml-32 py-32">
       <slot />
     </main>
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
