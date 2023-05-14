@@ -7,7 +7,7 @@
     <AppSideNav />
 
     <!-- the app childs component -->
-    <main class="flex flex-1 ml-32 py-32">
+    <main class="flex flex-1 pt-[60px] pl-[76px]">
       <slot />
     </main>
   </div>
