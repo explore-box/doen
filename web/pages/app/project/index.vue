@@ -9,7 +9,7 @@
     >
   </Head>
 
-  <div class="flex w-full">
+  <div class="flex w-full ml-32 py-32">
     <!-- detail and all project show here -->
     <div class="flex flex-col w-9/12">
       <h3 class="flex text-4xl font-medium">Projects</h3>
