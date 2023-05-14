@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex flex-col fixed z-10 inset-y-0 left-0 bg-white border-r-1 border-r-gray-100 py-6 px-3"
+    class="flex flex-col fixed z-10 inset-y-0 left-0 bg-white border-r border-r-gray-100 py-6 px-3"
   >
     <div class="flex justify-center items-center">
       <NuxtImg src="/images/logo.png" height="40" width="40" alt="Doen App" />
