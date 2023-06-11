@@ -12,28 +12,33 @@ updates:
     commit-message:
       prefix: "npm"
       include: "scope"
-      
+
   - package-ecosystem: "npm"
-    directory: "/web"
+    directory: "/apps/web"
     schedule:
       interval: "weekly"
     commit-message:
       prefix: "npm"
       include: "scope"
-      
+    labels:
+      - "📦 dependencies"
+
   - package-ecosystem: "npm"
-    directory: "/backend"
-    schedule: 
+    directory: "/apps/backend"
+    schedule:
       interval: "weekly"
     commit-message:
       prefix: "npm"
       include: "scope"
-      
+    labels:
+      - "📦 dependencies"
+
   - package-ecosystem: "pub"
-    directory: "/mobile",
+    directory: "/apps/mobile"
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "npm"
+      prefix: "pub"
       include: "scope"
-      
+    labels:
+      - "📦 dependencies"
