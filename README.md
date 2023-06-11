@@ -1,39 +1,23 @@
-<!-- README -->
-<!-- PROJECT INFO -->
-<div id="top"/>
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/54091887/234726196-3a990409-711c-4f8f-a3ce-d7d5c2866f93.png" width="80" height="80" alt="Doen Logo"/>
-  <br/>
-  <h1>Doen</h1>
-  <br/>
-Simple todo list application that include productivity methods
-  <br/>
-  <br/>
-  
-  <a href="https://github.com/nyomansunimadoen/wiki"><strong>🍀 Explore docs</strong></a>
-  <br/>
-  <a href="https://github.com/nyomansunimadoen/wiki/demo">View Demo</a>
-  .
-  <a href="https://github.com/nyomansunimadoen/issues">Issues</a>
-</div>
-
 <!-- All badge shields -->
 
-[![GitHub Super-Linter](https://github.com/nyomansunima/doen/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nyomansunimadoen/build)
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/nyomansunimadoen)
-![GitHub language count](https://img.shields.io/github/languages/count/nyomansunimadoen)
-![GitHub top language](https://img.shields.io/github/languages/top/nyomansunimadoen)
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/nyomansunimadoen/main)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/nyomansunimadoen)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/nyomansunimadoen)
+[![GitHub Super-Linter](https://github.com/nyomansunima/doen/actions/workflows/linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nyomansunima/doen/build)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/nyomansunima/doen)
+![GitHub language count](https://img.shields.io/github/languages/count/nyomansunima/doen)
+![GitHub top language](https://img.shields.io/github/languages/top/nyomansunima/doen)
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/nyomansunima/doen/main)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/nyomansunima/doen)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/nyomansunima/doen)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/nyomansunima)
-![GitHub issues](https://img.shields.io/github/issues/nyomansunimadoen)
-![GitHub milestones](https://img.shields.io/github/milestones/open/nyomansunimadoen)
-![GitHub](https://img.shields.io/github/license/nyomansunimadoen)
+![GitHub issues](https://img.shields.io/github/issues/nyomansunima/doen)
+![GitHub milestones](https://img.shields.io/github/milestones/open/nyomansunima/doen)
+![GitHub](https://img.shields.io/github/license/nyomansunima/doen)
 
 <br/>
-<br/>
+
+# Doen
+
+Simple todo list application that include productivity methods
 
 ## 👏 About
 
@@ -46,13 +30,11 @@ Doen is complete todo app for you that can help you to boost your productivity a
 This project is build on top monorepo approach, that's mean i put all of the code and other resource for any cross platform app including mobile, web, chrom extentsion and ny other.
 
 <br/>
-<br/>
 
 ### 💘 Motivation
 
 While doing something with task managenent or any todo app. I realized that i can't be more productive, sometimes some people distract me while focus, and there so much factor that involme to distracted. That's wahy i want to make application that can help me faster and become more productive, also provide some methods to stay focus while doing something
 
-<br/>
 <br/>
 
 ## 🎉 Features
@@ -89,7 +71,6 @@ Thanks for the stack and tools to make this application work. Here are several s
 - Others ...
 
 <br/>
-<br/>
 
 ## 🚀 Getting started
 
@@ -108,7 +89,7 @@ So, let's get started to runnig the application. Please follow this step by step
 
 1. First, clone this project by running this comman on your terminal.
    ```bash
-   git clone git@github.com:nyomansunimadoen.git
+   git clone git@github.com:nyomansunima/doen.git
    ```
 2. Install all dependencies for the project by running this in your terminal.
 
@@ -139,7 +120,7 @@ So, let's get started to runnig the application. Please follow this step by step
 
 ## 🥦 Docs
 
-All of the detail code documentation that cover the methods, tips and how i make this application is put on a single `Wiki` in this project. So please read more detail the project documentation on [Project Wiki](https://github.com/nyomansunimadoen/wiki)
+All of the detail code documentation that cover the methods, tips and how i make this application is put on a single `Wiki` in this project. So please read more detail the project documentation on [Project Wiki](https://github.com/nyomansunima/doen/wiki)
 
 <br/>
 <br/>
