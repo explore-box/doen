@@ -10,30 +10,30 @@ Simple todo list application that include productivity methods
   <br/>
   <br/>
   
-  <a href="https://github.com/explore-box/doen/wiki"><strong>🍀 Explore docs</strong></a>
+  <a href="https://github.com/nyomansunimadoen/wiki"><strong>🍀 Explore docs</strong></a>
   <br/>
-  <a href="https://github.com/explore-box/doen/wiki/demo">View Demo</a>
+  <a href="https://github.com/nyomansunimadoen/wiki/demo">View Demo</a>
   .
-  <a href="https://github.com/explore-box/doen/issues">Issues</a>
+  <a href="https://github.com/nyomansunimadoen/issues">Issues</a>
 </div>
 
-
 <!-- All badge shields -->
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/explore-box/doen/build)
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/explore-box/doen)
-![GitHub language count](https://img.shields.io/github/languages/count/explore-box/doen)
-![GitHub top language](https://img.shields.io/github/languages/top/explore-box/doen)
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/explore-box/doen/main)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/explore-box/doen)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/explore-box/doen)
+
+[![GitHub Super-Linter](https://github.com/nyomansunima/doen/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nyomansunimadoen/build)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/nyomansunimadoen)
+![GitHub language count](https://img.shields.io/github/languages/count/nyomansunimadoen)
+![GitHub top language](https://img.shields.io/github/languages/top/nyomansunimadoen)
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/nyomansunimadoen/main)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/nyomansunimadoen)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/nyomansunimadoen)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/nyomansunima)
-![GitHub issues](https://img.shields.io/github/issues/explore-box/doen)
-![GitHub milestones](https://img.shields.io/github/milestones/open/explore-box/doen)
-![GitHub](https://img.shields.io/github/license/explore-box/doen)
+![GitHub issues](https://img.shields.io/github/issues/nyomansunimadoen)
+![GitHub milestones](https://img.shields.io/github/milestones/open/nyomansunimadoen)
+![GitHub](https://img.shields.io/github/license/nyomansunimadoen)
 
 <br/>
 <br/>
-
 
 ## 👏 About
 
@@ -41,7 +41,7 @@ Simple todo list application that include productivity methods
 
 <br/>
 
-Doen is complete todo app for you that can help you to boost your productivity and performace. This application is research from the top level todo list application. Make with special treatment and simple user interface make it easy to use. Inside the application embed with rich feature and sync accross your device. 
+Doen is complete todo app for you that can help you to boost your productivity and performace. This application is research from the top level todo list application. Make with special treatment and simple user interface make it easy to use. Inside the application embed with rich feature and sync accross your device.
 
 This project is build on top monorepo approach, that's mean i put all of the code and other resource for any cross platform app including mobile, web, chrom extentsion and ny other.
 
@@ -76,7 +76,7 @@ While create this application, we consider to ensure the application work and he
 
 ## 🍀 Build on
 
-Thanks for the stack and tools to make this application work. Here are several stack that help this application stand out. 
+Thanks for the stack and tools to make this application work. Here are several stack that help this application stand out.
 
 - NuxtJS
 - NestsJS
@@ -92,47 +92,54 @@ Thanks for the stack and tools to make this application work. Here are several s
 <br/>
 
 ## 🚀 Getting started
+
 Please follow this step by step to get this project up running
 
 ### Requirements
-Before start to run locally on your computer please not that you should install this stacks, including: 
+
+Before start to run locally on your computer please not that you should install this stacks, including:
 
 - NodeJS
 - NPM
 
 ### Instalations
+
 So, let's get started to runnig the application. Please follow this step by step below
 
 1. First, clone this project by running this comman on your terminal.
-    ```bash
-    git clone git@github.com:explore-box/doen.git
-    ```
+   ```bash
+   git clone git@github.com:nyomansunimadoen.git
+   ```
 2. Install all dependencies for the project by running this in your terminal.
-    ```bash
-    # Install deps in web
-    cd web && npm i
-    
-    # Install deps in backend
-    cd backend && npm i
-    ```
+
+   ```bash
+   # Install deps in web
+   cd web && npm i
+
+   # Install deps in backend
+   cd backend && npm i
+   ```
+
 3. Please rename the `.env.template` file into `.env` file. Then provide the variables for each backend, web and any extentions.
 4. Then running the project in each app using.
-    ```bash
-    # Running backend app
-    cd backend && npm run dev
-    
-    ## Running web app
-    cd web && npm run dev
-    ```
+
+   ```bash
+   # Running backend app
+   cd backend && npm run dev
+
+   ## Running web app
+   cd web && npm run dev
+   ```
+
 5. Now open your browser then try to access [http://localhost:3000](http://localhost:3000)
 6. 🎉 Done
 
 <br/>
 <br/>
 
-
 ## 🥦 Docs
-All of the detail code documentation that cover the methods, tips and how i make this application is put on a single `Wiki` in this project. So please read more detail the project documentation on [Project Wiki](https://github.com/explore-box/doen/wiki)
+
+All of the detail code documentation that cover the methods, tips and how i make this application is put on a single `Wiki` in this project. So please read more detail the project documentation on [Project Wiki](https://github.com/nyomansunimadoen/wiki)
 
 <br/>
 <br/>
@@ -150,5 +157,5 @@ This project is placed under the [MIT License](.LICENSE.md)
 <br/>
 
 ## 🧑🏿‍💻 Authors
-[@nyomansunima](https://github.com/nyomansunima)
 
+[@nyomansunima](https://github.com/nyomansunima)
