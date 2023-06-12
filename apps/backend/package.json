@@ -35,7 +35,7 @@
     "class-validator": "^0.14.0",
     "compression": "^1.7.4",
     "express-useragent": "^1.0.15",
-    "helmet": "^6.1.5",
+    "helmet": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
