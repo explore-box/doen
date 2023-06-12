@@ -31,6 +31,6 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "vee-validate": "^4.8.6",
-    "yup": "^1.1.1"
+    "yup": "^1.2.0"
   }
 }
