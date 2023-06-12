@@ -1,0 +1,38 @@
+# To make sure the code match quality, you need to start testing the application
+# Testing allow you to make the application save and ready to
+# merge with the main branch
+#
+# ******** NOTE *********
+# Please note, that the test is only run on single platform
+# youu can run the test including e2e, unit testing, components and etc.
+
+name: Web Test
+
+# Only trigger the post
+# if something changes in the web folders
+on:
+  push:
+    branches-ignore: [main]
+    paths:
+      - "/apps/web/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "/apps/web/**"
+
+jobs:
+  e2e:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16, 18]
+    runs-on: ${{matrix.os}}
+    name: Running E2E Testing on Node ${{matrix.node}} ${{matrix.os}}
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node}}
