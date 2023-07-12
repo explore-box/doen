@@ -1,5 +1,6 @@
-<!-- All badge shields -->
+![Doen Banner](https://github.com/nyomansunima/doen/assets/54091887/647cc3b3-a7d0-4f52-aca8-9e940b7469c2)
 
+<!-- All badge shields -->
 [![GitHub Super-Linter](https://github.com/nyomansunima/doen/actions/workflows/linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nyomansunima/doen/build)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/nyomansunima/doen)
@@ -20,10 +21,6 @@
 Simple todo list application that include productivity methods
 
 ## 👏 About
-
-![Github Preview](https://user-images.githubusercontent.com/54091887/234733366-1d0d6768-cdec-4676-ab76-7e1f7a3fc55f.png)
-
-<br/>
 
 Doen is complete todo app for you that can help you to boost your productivity and performace. This application is research from the top level todo list application. Make with special treatment and simple user interface make it easy to use. Inside the application embed with rich feature and sync accross your device.
 
@@ -60,7 +57,7 @@ While create this application, we consider to ensure the application work and he
 
 Thanks for the stack and tools to make this application work. Here are several stack that help this application stand out.
 
-- NuxtJS
+- NextJS
 - NestsJS
 - Flutter
 - Vercel
@@ -115,15 +112,6 @@ So, let's get started to runnig the application. Please follow this step by step
 5. Now open your browser then try to access [http://localhost:3000](http://localhost:3000)
 6. 🎉 Done
 
-<br/>
-<br/>
-
-## 🥦 Docs
-
-All of the detail code documentation that cover the methods, tips and how i make this application is put on a single `Wiki` in this project. So please read more detail the project documentation on [Project Wiki](https://github.com/nyomansunima/doen/wiki)
-
-<br/>
-<br/>
 
 ## 🎯 Roadmap
 
