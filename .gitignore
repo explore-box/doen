@@ -4,18 +4,22 @@ node_modules/
 # nestjs
 dist/
 
-# nuxjs
-.nuxt
-.nitro
-.cache
-.output
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # env
 *.env
 
 # vercel
 .vercel
-
 
 # Logs
 logs
