@@ -1,3 +1,7 @@
+import form from '@tailwindcss/forms'
+import aspectRation from '@tailwindcss/aspect-ratio'
+import typography from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,7 +10,18 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['DM Sans', 'sans-serif'],
+    },
     extend: {
+      colors: {
+        black: '#090510',
+        brand: {
+          lime: '#BCFF73',
+          blue: '#323BFF',
+          dark: '#0E0135',
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [form, aspectRation, typography],
 }
